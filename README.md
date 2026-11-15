@@ -1,6 +1,7 @@
-# 🌒 Lunar Landing Navigator — Mission Control
+# 🌒 Lunar Landing Navigator  Mission Control
 
 *NASA Space Apps Challenge prototype*
+
 You can access the website  https://mervesafakkkk.github.io/lunar-landing-navigator/ with this link.
 
 An interactive tool for comparing lunar landing sites and dates. It shows where the Sun and Earth sit
