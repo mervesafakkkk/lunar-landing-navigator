@@ -138,7 +138,20 @@ python tools/lola_masks.py ldem_75s_240m.img --site -89.45 -137.0 -o ridge.csv
    full sunlight for this window. This is the "alternative sites in the same region" use case.
 6. **Landing-window scan → 1 year:** answers *when should we land?* across lunar days and seasons.
 7. Select Shackleton and switch **Terrain → Geometric:** sunlight jumps from 0% to 100% for this window. A smooth-sphere model would send a lander into a crater that never sees the Sun.
-8. Switch the **ephemeris → JPL Horizons:** the header shows "JPL HORIZONS DE441" and the numbers agree.
+8. Running locally (`npm run dev`), switch the **ephemeris → JPL Horizons:** the header shows "JPL HORIZONS DE441" and the numbers agree. On the GitHub Pages site this mode shows a fallback notice, because static hosting can't relay requests to Horizons.
+
+## How this was built: AI assistance
+
+This project was developed with the help of an AI coding assistant, **Claude (Anthropic)**, used through Claude Code.
+
+* **What the AI assistant did:** wrote most of the source code (the ephemeris and terrain calculations, the user interface, the LOLA processing tool and the build setup), drafted this README, `docs/DATA_ACCURACY.md` and the demo slides, and ran the tests described below.
+* **What our team did:** [describe your team’s role, e.g. chose the challenge and the features, directed the design, reviewed and tested the app, chose the demo scenario and prepared the submission].
+* **How the results were checked, not just generated:**
+  * Sun and Earth positions were compared with NASA/JPL Horizons (DE441) and agree to better than 0.01° (`npm run validate`).
+  * LOLA terrain horizons were tested on four documented permanently shadowed craters, which correctly get 0% sunlight over a full year.
+  * The map orientation of the LOLA data was settled empirically: known crater centres had to land in crater floors.
+  * Site coordinates were taken from cited public sources (NASA NSSDC, LROC, IAU/USGS Gazetteer, ISRO, Firefly), not generated.
+* **No AI inside the app:** the tool contains no AI model. Every result comes from published physical models and NASA data, labelled in the app as SOURCED, LOLA-DERIVED, COMPUTED or ILLUSTRATIVE.
 
 ## Credits
 
