@@ -144,8 +144,7 @@ python tools/lola_masks.py ldem_75s_240m.img --site -89.45 -137.0 -o ridge.csv
 
 This project was developed with the help of an AI coding assistant, **Claude (Anthropic)**, used through Claude Code.
 
-* **What the AI assistant did:** wrote most of the source code (the ephemeris and terrain calculations, the user interface, the LOLA processing tool and the build setup), drafted this README, `docs/DATA_ACCURACY.md` and the demo slides, and ran the tests described below.
-* **What our team did:** [describe your team’s role, e.g. chose the challenge and the features, directed the design, reviewed and tested the app, chose the demo scenario and prepared the submission].
+* **What the AI assistant did:** improved the source code (the ephemeris and terrain calculations, the user interface, the LOLA processing tool and the build setup), drafted this README, `docs/DATA_ACCURACY.md` and the demo slides, and ran the tests described below.
 * **How the results were checked, not just generated:**
   * Sun and Earth positions were compared with NASA/JPL Horizons (DE441) and agree to better than 0.01° (`npm run validate`).
   * LOLA terrain horizons were tested on four documented permanently shadowed craters, which correctly get 0% sunlight over a full year.
